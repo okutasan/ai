@@ -29,10 +29,18 @@ componentDidMount(){
         <h1>Tentang</h1>
       </div>
     )
-    const Contact = () => (
+    const Contact= () => (
       <div>
-        <h1>Contact</h1>
+        <ul>
+          <li><Link to="/Contact/Me">Me</Link></li>
+          <li><Link to="/Contact/You">You</Link></li>
+          <li><Link to="/Contact/ai">Ai</Link></li>
+        </ul>
+        <Route path="/Contact/:name" component={subContact}/>
       </div>
+    )
+    const subContact = ({match}) => (
+      <h1>{match.params.name}</h1>
     )
 
     let i=1;
