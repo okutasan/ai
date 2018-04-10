@@ -25,7 +25,7 @@ const styles = {
         width: 250,
     },
     fullList: {
-        width: auto,
+        width: 'auto',
     },
     root: {
         flexGrow: 1,
